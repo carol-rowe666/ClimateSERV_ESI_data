@@ -9,6 +9,8 @@ Usage: python get_ESI_tif.py xmin = -188.473227 xmax = -84.88908 ymin = 30.22333
 
 Required inputs (4):
     min and max values of longitude (xmin and xmax) and latitude (ymin and ymax) to create a bounding box for the tif files
+    If interested, from the web I found a site with the min/max lat and longs for each U.S. state:
+        https://anthonylouisdagostino.com/bounding-boxes-for-all-us-states/
 
 Optional inputs (3):
     ESI_type: global ESI 4 week (ESI_4) or global ESI 12 week (ESI_12)
