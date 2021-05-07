@@ -14,11 +14,13 @@ Scripts for obtaining and processing ESI (evaporative stress index) data from ht
 **OUTPUT:** ESI_tif2select_pt.csv  
 **DESCRIPTION:** Uses output .tif files from ESI_tif_clip.py to extract ESI values from specific sites as referenced from the input meta .csv file. Input metadata file must contain columns: longitude, latitude, stationTriplet. Longitude and latitude are in decimal degrees. The stationTriplet column is just a column of names for the stations - point location names.  
   
+  
 ## ENVIRONMENT - python packages and versions  
 **climateSERV_env.yml**  
 If you are not familiar with environments, you should get started. Here's a nice website: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html  
 conda env create -f climateSERV_env.yml  
-conda actiavate climateSERV_env  
+conda activate climateSERV_env  
+  
   
 ## EXAMPE FILES:  
 **SCAN_AL_metadata.csv** - metadata file containing the longitude, latitude, and station names (stationTriplet)  
