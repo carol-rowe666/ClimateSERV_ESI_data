@@ -2,7 +2,7 @@
 Scripts for obtaining and processing ESI (evaporative stress index) data from https://climateserv.servirglobal.net  
   
 ## SCRIPTS  
-**SCRIPT:** get_ESIPselect_pt.py  
+**SCRIPT:** get_ESI_select_pt.py  
 **OUTPUT:** poly_ESI_df.csv  
 **DESCRIPTION:** This retrieves ESI data from the https://climateserv.servirglobal.net/ website for specific point locations. User can select type of ESI data (4wk or 12wk), start and end dates, polygon size around the point location.  
   
