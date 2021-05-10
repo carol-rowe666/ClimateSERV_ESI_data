@@ -1,7 +1,7 @@
 # ClimateSERV_ESI_data
 Scripts for obtaining and comparing ESI (evaporative stress index) data from https://climateserv.servirglobal.net  
   
-![Flowchart](https://github.com/carol-rowe666/ClimateSERV_ESI_data/blob/main/ESI_flowchart.pdf
+![alt text](https://github.com/carol-rowe666/ClimateSERV_ESI_data/blob/main/ESI_flowchart.pdf
   
 ## SCRIPTS  
 **SCRIPT:** get_ESI_select_pt.py  
