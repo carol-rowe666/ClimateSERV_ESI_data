@@ -21,6 +21,18 @@ Scripts for obtaining and comparing ESI (evaporative stress index) data from htt
 **OUTPUT:** ESI_tif2select_pt.csv  
 **DESCRIPTION:** Uses output .tif files from ESI_tif_clip.py to extract ESI values from specific sites as referenced from the input meta .csv file. Input metadata file must contain columns: longitude, latitude, stationTriplet. Longitude and latitude are in decimal degrees. The stationTriplet column is just a column of names for the stations - point location names.  
   
+## Comparison SCRIPTS:  
+**SCRIPT**: merge_esi_csv.py  
+**OUTPUT**: master_ESI_CLIP_xyz.csv  
+**DESCRIPTION**: Not a stand-alone script. See flowchart for preceeding tif2xyz.sh script which produces <date>_CLIP.csv output files. These files contain xyz data for all pixel coordinates of the .tif files produced by the ESI_tif_clip.py script. xyz data is: long. and lat. for centroids (center of pixel boxes) and their corresponding ESI values.  
+  
+**SCRIPT**: ESI_output_comparison.py  
+**OUTPUT**: comparison_output.txt  
+**DESCRIPTION**: Compare the output from our 2 methods of acquiring ESI data (polygon vs tif/row/col method.)
+Compare values across the 8 closest pixels (user can change that value).  
+To get the closest pixels, I used centroids (or middle of the pixel) long/lats.  
+NOTE TO SELF: I should change the distance comparison using the haversine method!!!  
+NOTE: This is still in development for stand-alone. I may change output type as well....more to come.
   
 ## ENVIRONMENT - python packages and versions  
 **climateSERV_env.yml**  
