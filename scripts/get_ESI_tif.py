@@ -5,7 +5,7 @@ File Name: get_ESI_tif.py
 Author: Carol A. Rowe
 Date Created: 2021-05-07
 
-Usage: python get_ESI_tif.py xmin = -188.473227 xmax = -84.88908 ymin = 30.223334 ymax = 35.008028
+Usage: python get_ESI_tif.py -xmin -188.473227 -xmax -84.88908 -ymin 30.223334 -ymax 35.008028
 
 Required inputs (4):
     min and max values of longitude (xmin and xmax) and latitude (ymin and ymax) to create a bounding box for the tif files
@@ -68,10 +68,10 @@ if __name__ in '__main__':
     # This allows the --help to show the docstring at the top of this script.
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     # First 4 arguments are mandatory
-    parser.add_argument('xmin', metavar='min_longitude', help="Enter the minimum longitude in decimal degrees for the bounding box.")
-    parser.add_argument('xmax', metavar='max_longitude', help="Enter the maximum longitude in decimal degrees for the bounding box.")
-    parser.add_argument('ymin', metavar='min_latitude', help="Enter the minimum latitude in decimal degrees for the bounding box.")
-    parser.add_argument('ymax', metavar='max_latitude', help="Enter the maximum latitude in decimal degrees for the bounding box.")
+    parser.add_argument('-xmin', metavar='min_longitude', help="Enter the minimum longitude in decimal degrees for the bounding box.", type=float)
+    parser.add_argument('-xmax', metavar='max_longitude', help="Enter the maximum longitude in decimal degrees for the bounding box.", type=float)
+    parser.add_argument('-ymin', metavar='min_latitude', help="Enter the minimum latitude in decimal degrees for the bounding box.", type=float)
+    parser.add_argument('-ymax', metavar='max_latitude', help="Enter the maximum latitude in decimal degrees for the bounding box.", type=float)
     # Next 3 arguments are optional
     parser.add_argument('-t','--esi_Type', help="ESI data type either: ESI_4 or ESI_12. Default = ESI_4", type=str, default='ESI_4', required=False)
     parser.add_argument('-s','--start', help="Start date for query in form of: mm/dd/yyyy. Default = one month previous to today's date", type=invalid_date, default=(date.today() - relativedelta(months=1)).strftime('%m/%d/%Y'), required=False)
