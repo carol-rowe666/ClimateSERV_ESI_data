@@ -2,7 +2,7 @@ import pandas as pd
 from glob import glob
 from pathlib import Path
 
-directory = '/home/carol/Dropbox/UAH_project/Corey_start/ESI/temp3/tif2csv_files/'
+directory = '/path/to/tif2csv_files/'
 master_df = pd.DataFrame()
 for filepath in glob(directory + "20*_CLIP.csv"):
     base = Path(filepath).stem
